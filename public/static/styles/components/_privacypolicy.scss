@@ -1,0 +1,21 @@
+.privacy-policy {
+    padding: 0 15px;
+    padding-top: calc(var(--navbar-height) + 20px);
+    height: 100%;
+    overflow: auto;
+
+    .inactiveLink {
+        pointer-events: none;
+        cursor: default;
+    }
+    ol {
+        padding-left: 15px;
+    }
+    strong {
+        // font-family: "GothamPro-Black", sans-serif;
+    }
+    @include desktop{
+        height:auto;
+        padding-bottom: 4rem;
+    }
+}

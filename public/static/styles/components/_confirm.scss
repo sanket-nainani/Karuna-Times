@@ -1,0 +1,7 @@
+.confirm {
+    background-color: $modalBGColor;
+    .inner-text {
+        max-height: 400px;
+        overflow: auto;
+    }
+}

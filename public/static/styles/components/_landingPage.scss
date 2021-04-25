@@ -1,0 +1,52 @@
+.landing-page {
+    // display:flex;
+    height: 100%;
+		@include min-height-desktop;
+    // flex-direction: column;
+    .map {
+        // height: calc(100vh - #{$bottomSheetHeight});
+        height: 100%;
+        // @include iphone5{
+        //     height: calc(100vh - #{$bottomSheetHeight_s});
+        // }
+        position: absolute;
+        top: 0;
+        bottom:0px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        @include desktop {
+            display: none;
+        }
+    }
+    .mapDiv {
+        background: linear-gradient(
+            rgba(255, 255, 255, 0.82) 60%,
+            rgba(255, 255, 255, 0)
+        );
+        height: 62px;
+        z-index: 12;
+        position: fixed;
+        width: 100%;
+        @include desktop {
+            opacity: 0.3;
+        }
+    }
+    .landing-page-banner{
+        display: none!important;
+        @include desktop {
+            display: block!important;
+        }
+    }
+    .discount-strip{
+        display: none;
+    }
+    // .description {
+    //     color: #6c6c6c;
+    //     font-size: 14px;
+    //     line-height: 1.3;
+    //     @include notDesktop {
+           
+    //     }
+    // }
+}

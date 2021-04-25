@@ -1,0 +1,22 @@
+.retry {
+    img.retryImg {
+        width: 100px;
+        height: auto;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        @include iphone5 {
+            width: 70px;
+            margin-bottom: 1rem;
+        }
+    }
+    div.retrytext {
+        font-size: 1.25em;
+        margin-bottom: 0.5rem;
+        @include iphone5 {
+            margin-bottom: 0;
+        }
+    }
+    button.retryBtn {
+        font-size: 1.25em;
+    }
+}

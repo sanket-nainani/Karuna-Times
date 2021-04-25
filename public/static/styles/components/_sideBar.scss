@@ -1,0 +1,164 @@
+.sidebar {
+    &.open + .landing-page {
+        // pointer-events: none;
+    }
+
+    .menu-list {
+        // display: flex;
+        // flex-direction: column;
+        height: 100%;
+        overflow: auto;
+        & > .sidebarItem:last-child {
+            margin-bottom: 50px;
+        }
+    }
+    .content {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 18%;
+        height: 100%;
+        //overflow: auto;
+        @include tab {
+            right: 60%;
+        }
+        @include desktop {
+            right: 75%;
+        }
+        @include ipadPro {
+            right: 70%;
+        }
+      
+        
+        bottom: 0;
+        background-color: $bodyBackgroundColor;
+        background-color: var(--body-background-color);
+        z-index: 2000;
+        transform: translateX(-100%);
+        .sidebarBanner {
+            width: 100%;
+            height: 110px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+
+            .sidebarBg {
+                transform: skewY(5deg);
+                background-color: $primary;
+                background-color: var(--primary);
+                position: absolute;
+                top: -14px;
+                width: 100%;
+                @include tab {
+                    top: -24px;
+                }
+                bottom: 0;
+                z-index: -1;
+                left: 0;
+                right: 0;
+            }
+            img {
+                height: auto;
+								width:200px;
+                align-self: center;
+            }
+            .logo {
+                align-self: center;
+                font-size: 18px;
+                color: white;
+            }
+        }
+        .sidebarContent {
+            position: relative;
+            padding-top: 136px;
+            // overflow: auto;
+            height: 100%;
+            .icon {
+                color: #333;
+                font-size: 20px;
+                vertical-align: middle;
+                @include iphone5{
+                    font-size: 18px;
+                }
+            }
+        }
+        .submenu {
+            padding: 10px 0;
+            padding-left: 40px;
+            /* padding-bottom: 20px; */
+            padding-top: 0;
+            background-color: #f9f9f9;
+            .sidebarItemStyle {
+                padding: 5px 15px 5px 30px !important;
+                font-size: 13px;
+            }
+        }
+        .sidebarItem {
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            span {
+                padding-right: 20px;
+                vertical-align: text-top;
+                @include iphone5{
+                    vertical-align: bottom;
+                }
+                white-space: nowrap;
+                padding-right:0;
+            }
+            .sidebarItemStyle {
+                padding: 14px 20px;
+                display: flex;
+                @include desktop{
+                    padding: 14px 30px;
+                }
+            }
+        }
+    }
+    .login-container {
+        button {
+            width: 130px;
+        }
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #def4eb;
+        padding: 15px 0;
+    }
+    .backdrop {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.39);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1999;
+        transition: all 0.5s ease;
+    }
+    &.open {
+        .content {
+            transition: transform 0.5s ease;
+            transform: translateX(0%);
+        }
+        .backdrop {
+            display: block;
+        }
+    }
+    &.transition {
+        .content {
+            transition: transform 0.5s ease;
+        }
+    }
+}
+
+// loops through 100 times
+// @for $i from 1 through 9 {
+//   .order-#{$i} {
+//     order: $i;
+//   }
+// }

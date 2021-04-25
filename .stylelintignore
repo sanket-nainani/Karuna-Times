@@ -1,0 +1,9 @@
+dist/
+node_modules/
+
+*.html
+*.css
+*.js
+*.jsx
+*.less
+*.json

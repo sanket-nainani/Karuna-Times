@@ -1,0 +1,23 @@
+.age-popup {
+    background-color: $modalBGColor;
+    .modal-dialog {
+        margin-left:auto;
+        margin-right:auto;
+        max-width: 350px;
+        @include iphone5 {
+            max-width: 320px;
+        }
+    }
+    .logo-container {
+		// min-height:100px;
+        // margin: 0 auto;
+        // margin-bottom: 2rem;
+        min-height: 20px;
+        margin: 2rem auto;
+        width: 75%;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

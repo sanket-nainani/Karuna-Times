@@ -1,0 +1,61 @@
+.filter-box-parent{
+	.react-tabs__tab-panel{
+		border-bottom: 1px solid $dividerColor;
+	}
+
+		//margin:5px -5px;
+		ul{
+			padding:0;
+			margin: 0;
+		}
+
+	.react-tabs__tab-list {
+		padding: 10px;
+		white-space: nowrap;
+		overflow-x: auto;
+		border-bottom: 2px solid #ddd;
+	}
+	.react-tabs__tab{
+		border:1px solid $dividerColor;
+		border-radius:5px;
+		bottom:0;
+		&:after, &:before{
+			font-size: 1.5em;
+			line-height: 16px;
+			margin-left: 6px;
+			background: inherit;
+			position: static;
+		}
+		&:after{
+			content:"▼";
+		}
+		& + .react-tabs__tab{
+			margin-left:10px;
+
+		}
+		&:focus{
+			box-shadow:none;
+			border-color:$dividerColor;
+			&:after{
+				//content:"▼";
+			}
+		}
+		&--selected{
+			//border-color:var(--primary);
+			box-shadow: 0 0 0px 2px var(--primary);
+			background: var(--primary-light-50);
+
+		&:focus{
+			box-shadow: 0 0 0px 2px var(--primary);
+			border-color:$dividerColor;
+			&:after{
+				content:"▲";
+			}
+		}
+			&:after{
+				content:"▲";
+			}
+		}
+
+	}
+}

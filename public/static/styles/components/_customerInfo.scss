@@ -1,0 +1,304 @@
+.customer-info {
+    margin-top: 90%;
+		.title-icon{
+			font-size:20px;
+			display: inline-block;
+			    position: relative;
+					top: 3px;
+	}
+		.radio-container{
+			.col-6:only-child{
+				padding-left:15px!important;
+				padding-right: 0;
+			}
+		}
+    .special-top-offer {
+        padding: 5px;
+        background-color: $primary;
+        background-color: var(--primary);
+        color: white;
+        font-size: 13px;
+    }
+    .form-control:disabled,
+    .form-control[readonly] {
+        background-color: #ffffff;
+        opacity: 1;
+        color: #a0a0a0;
+    }
+    .notes {
+        resize: none;
+				border-radius:0;
+        font-size: 1em;
+    }
+    .error-msg {
+        //padding-left: 44px;
+        //padding-bottom: 5px;
+        color: #f44336;
+				margin-top:2px;
+        font-size: 1em;
+        &:empty {
+            padding-bottom: 0;
+        }
+    }
+    .error-msg2 {
+        padding-bottom: 5px;
+        color: #f44336;
+        font-size: 1em;
+        &:empty {
+            padding-bottom: 0;
+        }
+    }
+    .card-parent {
+        transform-origin: top;
+        transition: all 0.3s linear;
+        opacity: 0;
+
+        &.entered {
+            opacity: 1;
+        }
+    }
+
+    @include iphone5 {
+        margin-top: 90%;
+    }
+    // padding: 20px;
+    top: 0;
+    z-index: 2;
+    position: relative;
+    background: white;
+    padding-bottom: 100px;
+    border-radius: 20px 20px 0 0;
+    padding-top: 16px;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 5px;
+        background: #9e9e9e;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        top: 9px;
+        border-radius: 4px;
+    }
+    //overflow: scroll;
+    .customer-info-inner {
+        // height: auto;
+        // background-color: #fff;
+        // pointer-events: all;
+        // margin-top: 50vh;
+        // height: 610px;
+    }
+    .wallet-container {
+				.w-inner{
+					border:1px solid $primary;
+					border:1px solid var(--primary);
+					padding:10px;
+				}
+        .icon-wallet {
+					font-size: 1.5em;
+					    margin-right: 10px;
+        }
+        span {
+            vertical-align: middle;
+        }
+				.amt{
+						display: inline-block;
+						margin-top: 2px;
+				}
+        .wallet-info {
+            padding-left: 35px;
+            margin-top: 6px;
+        }
+    }
+    .promo-code-container {
+        input {
+            //font-size: 1em;
+            //border-right: 0;
+            font-size: 1em;
+						border-radius:0;
+        }
+        .apply-btn {
+        }
+        .promo-messsage {
+            font-size: 1.2em;
+        }
+    }
+    .promo-after {
+        position: relative;
+        padding-left: 40px;
+        .remove-promo {
+            position: absolute;
+            left: 0;
+            top: -1px;
+            padding: 0;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            background: transparent;
+            border: 1px solid #c7c7c7;
+            color: #888688;
+            font-size: 0.7em;
+            background: transparent;
+            i {
+                font-weight: bold;
+                line-height: inherit;
+            }
+        }
+    }
+    .otp-on-call {
+        padding: 25px 0 15px 0;
+        .btn-primary {
+            min-width: 250px;
+        }
+    }
+
+    .radio-date-time {
+        border-bottom: 1px solid #dadada;
+        padding: 10px 15px;
+        padding-bottom: 0;
+        input {
+            padding-left: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: 0px solid transparent;
+            border-radius: 0;
+            font-size: 1em;
+        }
+    }
+    input[type="time"]::-webkit-clear-button {
+        display: none;
+    }
+    .radio-holder {
+        .custom-radio-long {
+            .iconholder {
+                font-size: 22px;
+            }
+            label {
+                padding: 0 34px;
+            }
+        }
+    }
+
+    .email-input-parent {
+        .i-inner{
+					display: flex;
+        align-items: center;
+				border: 1px solid #ced4da;
+				input{
+					border:0;
+				}
+				.small-button{
+					margin-right:6px;
+				}
+        }
+
+
+
+        .small-button {
+            position: static;
+            white-space: nowrap;
+            margin-right: 10px;
+            // padding-left: 0;
+        }
+        //input {
+        //padding-right: 80px;
+        //}
+    }
+    .contact-admin-parent{
+
+    border: 1px solid #FF9800;
+    padding: 6px 10px;
+    /* line-height: 34px; */
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    /* line-height: 1; */
+    background-color: #FFF3E0;
+    }
+    .contact-admin {
+        color: #333;
+        white-space: normal;
+        padding-left: 0;
+        padding:0;
+        line-height: 1.8;
+
+    }
+    @include desktop {
+        margin-top: 0px;
+        position: static;
+        border-radius: 0;
+        padding-top: calc(var(--navbar-height) + 10px);
+    }
+    .line-through-text span,.line-behind-text span{
+        background-color:white!important;
+    }
+}
+.portal-uppy {
+    .uppy-Dashboard--modal {
+        z-index: 9999;
+        position: relative;
+    }
+    .uppy-DashboardTabs {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border-bottom: 1px dashed #b9b9b9;
+    }
+    .uppy-Dashboard-close .UppyIcon {
+        width: 22px;
+        height: 22px;
+    }
+    .uppy-Dashboard-close {
+        top: 25px;
+        right: 25px;
+    }
+    .uppy-Dashboard-close:focus {
+        outline: 0;
+    }
+    .uppy-Dashboard--modal .uppy-Dashboard-inner {
+        position: fixed;
+        //top: 70px;
+        left: 0;
+        border: none;
+        // bottom: 69px;
+        // height: auto;
+    }
+    .uppy-StatusBar-actionBtn.uppy-StatusBar-actionBtn--upload {
+        background-color: $primary;
+        background-color: var(--primary);
+    }
+}
+.why-chose-us {
+		.content{
+			padding-left: 80px;
+			padding-right:15px;
+		}
+    img {
+        //height: 100px;
+        width: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    i {
+        font-size: 46px;
+				    position: absolute;
+						    top: 4px;
+								    left: 20px;
+    }
+    .icon-reliable {
+        font-size: 34px;
+				    left: 16px;
+    }
+		.icon-safety{
+			font-size: 43px;
+		}
+    .holder {
+        margin-top: 3rem;
+				position: relative;
+        p {
+            //width: 85%;
+            //margin: 0 auto;
+            margin-top: 0.5rem;
+        }
+    }
+}

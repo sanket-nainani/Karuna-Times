@@ -1,0 +1,56 @@
+.custom-radio-long {
+    border-top: 1px solid #dadada;
+    padding: 5px 15px;
+    position: relative;
+    &:last-child {
+        border-bottom: 1px solid #dadada;
+    }
+    &.single-label {
+        label {
+            line-height: 38px;
+        }
+    }
+    input {
+        display: none;
+        &:checked {
+            & + .checked-icon:after {
+                display: block;
+            }
+        }
+    }
+    label {
+        display: block;
+        margin: 0;
+        padding: 0 50px;
+        min-height: 42px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .iconholder {
+        font-size: 2em;
+        left: 15px;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+    .checked-icon {
+        &:after {
+            color: $primary;
+            color:var(--primary);
+            content: "\E909";
+            display: none;
+            position: absolute;
+            right: 0px;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+[data-hidebottomborder="true"] {
+    border-bottom: 1px solid transparent !important;
+}

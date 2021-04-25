@@ -1,0 +1,24 @@
+.right-drawer {
+    display: none;
+    @include pc {
+        transition: width 0.3s ease-in;
+        display: block;
+        width: 0;
+        height: 100vh;
+        overflow: hidden;
+        .right-drawer-inner {
+            width: 0;
+            transition: width 0.3s ease-in;
+            overflow: auto;
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: white;
+        }
+        &.open {
+            //display:block;
+            //flex:0 0 $rightDrawerWidth;
+        }
+    }
+}

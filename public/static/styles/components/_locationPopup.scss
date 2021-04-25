@@ -1,0 +1,25 @@
+.location-popup {
+    .btn-margin {
+        margin-right: 15px;
+    }
+    .input-parent {
+        position: relative;
+        input {
+            padding-left: 35px;
+        }
+        .l-icon {
+            position: absolute;
+            left: 10px;
+            top: 9px;
+            font-size: 17px;
+        }
+    }
+    @include iphone5 {
+        .small-btn {
+            font-size: 12px;
+        }
+    }
+}
+.pac-container {
+    z-index: 1080 !important;
+}

@@ -1,0 +1,28 @@
+.full-screen-popup {
+    background-color: rgba(0, 0, 0, 0.62);
+    .modal-header {
+        display: block;
+        position: relative;
+        padding-right: 37px;
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+    }
+
+    .modal-dialog {
+        // margin: 0px;
+        height: 100%;
+        padding: 15px 15px 30px 15px;
+    }
+    .modal-content {
+        height: 100%;
+        // border-radius: 0;
+        border: 0;
+        padding-bottom: 15px;
+    }
+    .modal-body {
+        overflow: auto;
+    }
+}

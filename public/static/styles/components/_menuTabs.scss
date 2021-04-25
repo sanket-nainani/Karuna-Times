@@ -1,0 +1,108 @@
+
+    .top-menu-container{
+        .m-item{
+            cursor: pointer;
+            padding:7px 8px;
+            &.s-default{
+                box-shadow: inset 0 -3px 0px 0px var(--primary);  
+            }
+            &:last-child{
+                background-color: white;
+
+                box-shadow: inset 0 -1px 0px 0px $dividerColor, inset 0 1px 0px 0px $dividerColor;
+            }
+
+
+        }
+        .m-title{
+            font-size:1.0rem;
+        }
+				.subtitle{
+					font-size: 13px;
+				}
+        .r-icon	{
+            position: absolute;
+            right: 3px;
+            top:50%;
+            transform:translateY(-50%);
+            font-size:1.7rem
+        }
+        @include iphone5{
+            .r-icon	{
+                font-size: 1.2rem;
+            }
+            .m-title{
+                font-size:0.8rem;
+            }
+            .m-item{
+                padding: 5px 8px;
+            }
+        }
+        .l-icon{
+            font-size: 58px;
+            position: absolute;
+            left: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @include desktop{
+            .m-item{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                &:last-child{
+                    // background-color: white;
+                   // border-right: 1px solid $dividerColor;
+                    box-shadow: none;
+                }
+
+            }
+            .m-title{
+                font-size:18px;
+            }
+				.subtitle{
+					font-size: 14px;
+				}
+            .m-item{
+                padding: 25px 70px 25px 100px;
+            }
+            .r-icon{
+                right: 30px;
+                font-size: 1.4rem;
+                padding: 8px;
+                background-color: white;
+                color: #504f4f;
+                border-radius: 8px;
+                border: 1px solid $dividerColor;
+            }
+        }
+
+        &.sticky-menu{
+            position:sticky;
+            top:$navbarHeight;
+            // margin: 0 -15px;
+            z-index:1;
+            padding: 0;
+            margin-top:-2rem;
+
+            @include desktop{
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            background-color:white;
+            .l-icon{
+                color: $primary;
+                color: var(--primary);
+            }
+            .currentTab{
+                background-color: $primary;
+                background-color: var(--primary);
+                color:white;
+
+                .current-text{
+                    color:white;
+                }
+            }
+        }
+    }

@@ -1,0 +1,91 @@
+
+
+
+
+// .slideup-modal-appear {
+//   bottom: -100vh;
+// }
+// .slideup-modal-appear-active {
+//   opacity: 1;
+// }
+// .slideup-modal-exit {
+//   opacity: 1;
+// }
+// .slideup-modal-exit-active {
+//   opacity: 0;
+// }
+  .modal-dialog {
+    transition: bottom 300ms;
+  }
+  .slideup-modal-appear .modal-dialog {
+    bottom: -100vh;
+
+  }
+  .slideup-modal-appear-active .modal-dialog {
+    bottom: 0;
+
+  }
+  .slideup-modal-exit {
+    bottom: 0;
+  }
+  .slideup-modal-exit-active .modal-dialog {
+
+    bottom: -100vh;
+  }
+
+  .slideup-modal-enter .modal-dialog {
+    bottom: -100vh;
+
+  }
+  .slideup-modal-enter-active .modal-dialog {
+     bottom: 0;
+
+  }
+  .slideup-modal-exit {
+     bottom: 0;
+  }
+  .slideup-modal-exit-active .modal-dialog {
+
+    bottom: -100vh;
+  }
+
+
+
+@include notDesktop{
+  .modal-dialog {
+    transition: bottom 300ms;
+  }
+  .slideup-modal-mobile-appear .modal-dialog {
+    bottom: -100vh;
+
+  }
+  .slideup-modal-mobile-appear-active .modal-dialog {
+    bottom: 0;
+
+  }
+  .slideup-modal-mobile-exit {
+    bottom: 0;
+  }
+  .slideup-modal-mobile-exit-active .modal-dialog {
+
+    bottom: -100vh;
+  }
+
+  .slideup-modal-mobile-enter .modal-dialog {
+    bottom: -100vh;
+
+  }
+  .slideup-modal-mobile-enter-active .modal-dialog {
+     bottom: 0;
+
+  }
+  .slideup-modal-mobile-exit {
+     bottom: 0;
+  }
+  .slideup-modal-mobile-exit-active .modal-dialog {
+
+    bottom: -100vh;
+  }
+
+}
+

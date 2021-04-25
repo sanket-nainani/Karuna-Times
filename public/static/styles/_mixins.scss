@@ -1,0 +1,89 @@
+@mixin iphone5 {
+    @media (max-width:#{$iphone5-width}) {
+        @content;
+    }
+}
+@mixin real-iphone5 {
+    @media (max-width:#{$iphone5-real-width}) {
+        @content;
+    }
+}
+@mixin iphone6 {
+    @media (max-width:#{$iphone6-width}) and (-webkit-device-pixel-ratio : 2){
+        @content;
+    }
+}
+@mixin medium-phone {
+    @media (min-width: #{$medium-phone-width}) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media (min-width: #{$tab-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin notDesktop {
+    @media (max-width: #{$desktop-width - 0.02}) {
+        @content;
+    }
+}
+
+@mixin notTab {
+    @media (max-width: #{$tab-width - 0.02}) {
+        @content;
+    }
+}
+
+@mixin ipadPro {
+    @media only screen
+    and (min-width: 1024px)
+    and (max-height: 1366px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 1.5) {
+        @content;
+  }
+
+}
+
+
+
+%increase-touch-area {
+    &:before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        bottom: -10px;
+        left: -10px;
+        right: -10px;
+    }
+}
+
+%brand-gradient-reverse {
+    background: linear-gradient($brandGradientBottom, $brandGradientTop);
+}
+%brand-gradient {
+    background: linear-gradient($brandGradientTop, $brandGradientBottom);
+}
+
+%min-height-desktop{
+
+		@include desktop{
+			height:auto;
+			min-height:calc(100vh - #{$footerHeight});
+		}
+}
+@mixin min-height-desktop{
+		@include desktop{
+			height:auto;
+			min-height:calc(100vh - #{$footerHeight});
+		}
+}

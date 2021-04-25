@@ -1,0 +1,29 @@
+.item-not-found {
+    img {
+        width: 150px;
+        height: auto;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        @include iphone5 {
+            width: 70px;
+            margin-bottom: 1rem;
+        }
+        @include desktop {
+            width: 250px;
+            margin-bottom: 2rem;
+        }
+    }
+    .item-not-found-text {
+        font-size: 1.25em;
+        margin-bottom: 0.5rem;
+        @include iphone5 {
+            margin-bottom: 0;
+        }
+    }
+   &.fixed{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   }
+}

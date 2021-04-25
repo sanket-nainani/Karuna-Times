@@ -1,0 +1,65 @@
+
+.modal,
+.modal-dialog {
+  transition: opacity 300ms, transform 300ms;
+}
+
+.anim-modal-appear {
+  opacity: 0;
+}
+.anim-modal-appear-active {
+  opacity: 1;
+}
+.anim-modal-exit {
+  opacity: 1;
+}
+.anim-modal-exit-active {
+  opacity: 0;
+}
+
+.anim-modal-appear .modal-dialog {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.anim-modal-appear-active .modal-dialog {
+  opacity: 1;
+  transform: translateX(0);
+}
+.anim-modal-exit {
+  opacity: 1;
+}
+.anim-modal-exit-active .modal-dialog {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+
+
+.anim-modal-enter {
+  opacity: 0;
+}
+.anim-modal-enter-active {
+  opacity: 1;
+}
+.anim-modal-exit {
+  opacity: 1;
+}
+.anim-modal-exit-active {
+  opacity: 0;
+}
+
+.anim-modal-enter .modal-dialog {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.anim-modal-enter-active .modal-dialog {
+  opacity: 1;
+  transform: translateX(0);
+}
+.anim-modal-exit {
+  opacity: 1;
+}
+.anim-modal-exit-active .modal-dialog {
+  transform: scale(0.9);
+  opacity: 0;
+}

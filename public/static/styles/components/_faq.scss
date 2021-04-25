@@ -1,0 +1,65 @@
+.faq {
+    padding: 0 10px;
+    padding-top: calc(var(--navbar-height) + 20px);
+    // height: 100%;
+    // overflow: auto;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 4rem;
+    @include desktop {
+        max-width: $desktopContentWidth;
+        height: auto;
+        margin: 0 auto;
+    }
+		@include min-height-desktop;
+    .accordion {
+        border-radius: 0;
+        border: none;
+        .panel {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .accordion-item {
+            border-bottom: 1px solid $dividerColor;
+            .title {
+                border-radius: 0;
+                background-color: #ffffff;
+                padding: 10px;
+                padding-right: 30px;
+                position: relative;
+            }
+            &.active {
+                .title {
+                    background-color: #eee;
+                }
+                .panel {
+                    padding: 10px;
+                    overflow: auto;
+                }
+            }
+        }
+    }
+    .accordion .accordion-item .title:after {
+        font-family: "icomoon" !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: absolute;
+        right: 6px;
+        top: 13px;
+    }
+    .accordion .accordion-item .title:after {
+        content: "\e93a" !important;
+        transform: rotateZ(90deg);
+        font-size: 20px;
+    }
+
+    .accordion .accordion-item.active .title:after {
+        transform: rotateZ(270deg);
+    }
+}

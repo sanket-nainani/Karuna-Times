@@ -1,0 +1,110 @@
+.banner {
+  //display:none;
+  .carousel .slide {
+    background: var(--body-background-color);
+}
+  .banner-inner{
+    height: auto;
+      background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  }
+  .banner-content{
+    text-align: center;
+  }
+.just-a-container{
+  position: absolute;
+}
+  .banner-image {
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* z-index: 0; */
+    right: 0;
+    margin: 0;
+    bottom: 0;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+
+    @include desktop {
+      height: auto;
+    }
+  }
+
+
+  .info-sec {
+    // position: absolute;
+    padding: 15px;
+    background-color: #f7f7f7;
+    // color: white;
+    z-index: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width:100%;
+
+    i {
+      font-size: 28px;
+      vertical-align: middle;
+      margin-right: 15px;
+    }
+
+    span {
+      vertical-align: middle;
+      font-size: 16px;
+
+    }
+
+    @include iphone5 {}
+  }
+
+  @include notDesktop {
+    //display:block;
+    .banner-inner{
+      // height: 200px;
+    }
+    
+
+    h1 {
+      font-size: 25px;
+    }
+
+    .info-sec {
+      padding: 6px 0;
+    }
+
+    .banner-small-font {
+      font-size: 21px;
+    }
+    .container {
+        padding-left: 9px;
+        padding-right: 9px;
+        .row{
+            margin-left: -9px;
+            margin-right: -9px;
+        }
+      }
+
+    .info-sec {
+      
+
+      i {
+        font-size: 24px;
+        margin-right: 9px;
+      }
+
+      span {
+        font-size: 13px;//remove this 
+      }
+    }
+
+  }
+
+  @include iphone5 {
+    .banner-small-font {
+      font-size: 18px;
+    }
+  }
+}

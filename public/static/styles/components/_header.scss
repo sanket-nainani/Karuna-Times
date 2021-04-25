@@ -1,0 +1,151 @@
+.header {
+    height: var(--navbar-height);
+    transition: all 0.3s ease-in;
+
+    &.white-bg,&.white-bg-mobile{
+        // *{
+        //     color:#333;
+        // }
+    }
+    &.transparent {
+        background-color: transparent;
+        // *{
+        //     color:#fff;
+        // }
+
+    }
+    &.centered-header {
+        color: white;
+        button {
+            display: none;
+        }
+        .logo-text {
+            text-align: center;
+            padding-left: 0;
+        }
+    }
+    &.desktop-super-primary{
+        @include desktop {
+            *{
+                color:$primary;
+                color:var(--primary);
+            }
+        }
+    }
+    &.desktop-super-black{
+        @include desktop {
+            *{
+                color:#333;
+            }
+        }
+    }
+    &.desktop-super-white{
+        @include desktop {
+            *{
+                color:#fff;
+            }
+        }
+    }
+    .btn {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        text-align: center;
+        line-height: 50px;
+        background-color: transparent;
+        color: #333;
+				@include iphone5{
+        width: 45px;
+        height: 45px;
+				}
+    }
+    .left-btn {
+        font-size: 2em;
+        position: absolute;
+        left: 10px;
+        top: 7px;
+        text-shadow: 0 0px 1px rgba(255, 255, 255, 0.6901);
+        @include iphone5{
+            left: 0px;
+            font-size: 1.7em;
+        }
+    }
+    .right-btn-container {
+        position: absolute;
+        right: 10px;
+        top: 7px;
+        text-align: right;
+    }
+    .right-btn {
+        font-size: 2em;
+        //position: absolute;
+        //right: 10px;
+        //top: 7px;
+    }
+    .chat-btn {
+        @include desktop{
+            margin-right: 10px;
+        }
+        img,svg {
+            width: 36px;
+            height: auto;
+            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3));
+            position: relative;
+            top: -3px;
+            @include iphone5 {
+                width: 30px;
+                top: -2px;
+            }
+        }
+    }
+
+    .btn-more-info {
+        //font-size: 2.3em;
+        position: absolute;
+        right: 70px;
+        top: 16px;
+        font-size: 0.8rem;
+        width: 28px;
+        height: 28px;
+        background: #333;
+        color: white;
+        display: inline-block;
+        border-radius: 50%;
+        line-height: 28px;
+        @include iphone5 {
+            width: 25px;
+            right: 65px;
+            height: 25px;
+            line-height: 25px;
+            top: 19px;
+        }
+    }
+
+    .main-logo {
+
+        font-size: 1em;
+        // margin-top: 10px;
+        width: 100%;
+        padding-left: 50px;
+				height:48px;
+				img{
+					width:auto;
+                    height:100%;
+                    cursor: pointer;
+                }
+                @include iphone5{
+
+                    padding-left: 40px;
+                }
+    }
+    .logo-text {
+        width: 100%;
+        padding-left: 50px;
+        font-size: 1.4em;
+    }
+    @include iphone5{
+				padding:0;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

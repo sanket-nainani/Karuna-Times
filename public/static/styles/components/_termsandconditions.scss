@@ -1,0 +1,15 @@
+.termsandconditions {
+    padding: 0 15px;
+    padding-top: calc(var(--navbar-height) + 20px);
+    height: 100%;
+    overflow: auto;
+
+    .inactiveLink {
+        pointer-events: none;
+        cursor: default;
+    }
+    @include desktop{
+        height:auto;
+        padding-bottom: 4rem;
+    }
+}

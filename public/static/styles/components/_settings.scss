@@ -1,0 +1,26 @@
+.settings {
+    padding-top: $navbarHeight + 5px;
+    @include desktop {
+        padding-top: $navbarHeight + 10px;
+    }
+    height: 100%;
+    overflow: auto;
+    width: $desktopContentWidth;
+    margin: 0 auto;
+    .s-list {
+        a,
+        button {
+            font-size: 14px;
+        }
+        .item {
+            background: transparent;
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+
+            .setting-icon {
+                margin-right: 10px;
+                min-width: 14px;
+            }
+        }
+    }
+}

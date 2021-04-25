@@ -1,0 +1,11 @@
+.about-us {
+    padding: 0 15px;
+    padding-top: calc(var(--navbar-height) + 20px);
+    // height: 100%;
+    // overflow: auto;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+		@include min-height-desktop;
+}

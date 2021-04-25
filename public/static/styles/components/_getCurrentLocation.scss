@@ -1,0 +1,25 @@
+.get-current-location {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // top: 180px;
+    top: 125px;
+
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    @include iphone5 {
+        top: 119px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
+    }
+    &:focus {
+        box-shadow: none;
+        background-color: rgb(208, 208, 208);
+    }
+}

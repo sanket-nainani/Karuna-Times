@@ -1,0 +1,74 @@
+.custom-radio-box {
+	cursor: pointer;
+    border: 1px solid #dadada;
+    position: relative;
+		height: 100%;
+		.top-part{
+			font-size: 15px;
+			@include iphone5{
+				font-size: 14px;
+			}
+		}
+		.subtitle{
+			margin-top:0.35rem;
+			    font-size: 13px;
+		}
+    &.single-label {
+        label {
+            line-height: 38px;
+        }
+    }
+    input {
+        display: none;
+        & + .checked-icon:after {
+            display: block;
+            content: "\e953";
+            color: #c3c3c3;
+        }
+        &:checked {
+            & + .checked-icon:after {
+                display: block;
+                content: "\e952";
+                color: $primary;
+                color:var(--primary);
+            }
+        }
+    }
+    label {
+    padding: 8px 10px;
+        display: block;
+        margin: 0;
+        //padding: 0 50px;
+        // min-height: 42px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+				cursor: pointer;
+    }
+    .iconholder {
+			font-size: 1.5em;
+			left: 15px;
+			position: absolute;
+			right: 6px;
+			top: 50%;
+			transform: translateY(-50%);
+			pointer-events: none;
+    }
+    .checked-icon {
+        &:after {
+            // color: $primary;
+            // color:var(--primary);
+            // content: "\E909";
+            // display: none;
+            position: absolute;
+            right: 0px;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+[data-hidebottomborder="true"] {
+    border-bottom: 1px solid transparent !important;
+}

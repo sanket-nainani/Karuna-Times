@@ -1,0 +1,133 @@
+.new-header {
+	background-color: var(--secondary-color);
+	// height: auto;
+	flex-direction: column;
+	align-items: stretch;
+	padding: 0;
+
+	.main-logo {
+		height: 40px;
+	}
+	.n-container{
+		// height: $navbarHeight;
+		padding: 0.5rem 1rem;
+		padding-bottom: 0;
+		position: relative;
+		flex: 1;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content:center;
+		.f-sec{
+			padding: 3px;
+    		margin-bottom: 9px;
+
+		}
+		.s-sec{
+			display: none;
+		}
+		.t-sec{
+			display: none;
+			align-items: center;
+		}
+		.t-search-bar{
+			    border-radius: 8px;
+					    overflow: hidden;
+			.btn{
+				position: absolute;
+				top:0;
+				right: 0;
+				bottom: 0;
+				background-color:grey;
+				height: auto;
+				line-height: 40px;
+				border:0;
+			}
+		}
+		*{
+			color:white;
+		}
+		.top-filter-btn{
+			position: relative;
+			right:-12px;
+		}
+	}
+	@include desktop {
+		.n-container{
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-start;
+			padding-top: 0;
+			.f-sec{
+				margin: 0;
+			}
+			.s-sec{
+				display:block;
+				flex:1;
+				padding:0 2rem;
+			}
+			.t-sec{
+				display:flex;
+				padding-right: 10px;
+			}
+			.right-btn-container{
+				position: static;
+			}
+		}
+
+	}
+}
+.secondary-navbar{
+	margin-top: var(--navbar-height);
+	background-color: var(--secondary-color);
+	padding: 0.5rem 1rem;
+	padding-bottom: 0;
+	position: relative;
+	flex: 1;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content:center;
+	.f-sec{
+		padding: 3px;
+		margin-bottom: 9px;
+	}
+	.t-sec{
+		display: flex;
+		align-items: center;
+	*{
+		color:white!important;
+	}
+	}
+	.t-search-bar{
+			border-radius: 8px;
+					overflow: hidden;
+		.btn{
+			position: absolute;
+			top:0;
+			right: 0;
+			bottom: 0;
+			background-color:grey;
+			height: auto;
+			line-height: 1;
+			border:0;
+		}
+	}
+	*{
+		color:white;
+	}
+	.top-filter-btn{
+		position: relative;
+		right:-12px;
+		width: 50px;
+		    height: 50px;
+				    font-size: 2em;
+	}
+	@include desktop{
+		display:none !important;
+		*{
+			display:none;
+		}
+	}
+	&.minimal-navbar{
+		display:none !important;
+	}
+}

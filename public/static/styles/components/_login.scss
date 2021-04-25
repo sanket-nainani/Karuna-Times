@@ -1,0 +1,194 @@
+.login {
+  padding: 15px 20px;
+  padding-top: calc(var(--navbar-height) + 5px);
+  height: 100%;
+  overflow: auto;
+
+  @include desktop {
+    .small-text{
+      font-size: 80%;
+    }
+    display: flex;
+    padding: 0px 15px;
+
+    .left-sec {
+      height: calc(100vh);
+      background-image: url("/_next/static/images/default.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .right-sec {
+      max-width: 400px;
+      min-width: 400px;
+      margin: auto;
+      margin-top: 6rem;
+    }
+
+    //width: 450px;
+    //margin: auto;
+  }
+
+  @include min-height-desktop;
+}
+
+
+
+.login,
+.login-popup {
+
+  @include notDesktop {
+    .left-sec {
+      display: none;
+    }
+
+    .right-sec {
+      margin-top: 4rem;
+    }
+  }
+
+
+
+  .img-container {
+    width: 72%;
+    margin: 3rem auto;
+
+    @include iphone5 {
+      margin: 2rem auto;
+    }
+  }
+
+  .error-msg {
+    color: #f44336;
+    font-size: 1em;
+    margin-top: 5px;
+
+    & :empty {
+      margin-top: 0px;
+    }
+  }
+
+  .input-box-icon {
+    .l-icon {
+      font-size: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .small-button {
+    position: absolute;
+    right: 10px;
+    font-size: 1.1em;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.05rem 0.5rem;
+    color: $primary;
+    color: var(--primary);
+    background-color: transparent;
+    background-image: none;
+
+    // border-color: $primary;
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:active {
+      box-shadow: none;
+      background: #eaeaea;
+    }
+
+    &.left {
+      right: auto;
+      left: 100px;
+    }
+  }
+
+  .min-width-btn {
+    min-width: 140px;
+
+    @include iphone5 {
+      min-width: 120px;
+    }
+  }
+
+  .otp-input {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .phone-number {
+    font-size: 1em;
+    padding: 10px;
+    padding-left: 65px;
+
+    @include iphone5 {
+      padding-left: 55px;
+    }
+  }
+
+  .country-code {
+    font-size: 1em;
+    display: block;
+    color: #a09fa0;
+    position: absolute;
+    left: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    line-height: 35px;
+
+    &:focus {
+      border: 0;
+      box-shadow: none;
+    }
+
+    @include iphone5 {
+      // top: 4px;
+      width: 50px;
+      line-height: 31px;
+    }
+
+    @include desktop {}
+  }
+
+  // .phone-number {
+  //   padding-left: 77px;
+  //   @include iphone5 {
+  //     padding-left: 94px;
+  //   }
+  // }
+  // .country-code {
+  //   display: block;
+  //   color: #a09fa0;
+  //   position: absolute;
+  //   left: 42px;
+  //   top: 5px;
+  //   width: 55px;
+  //   padding: 0;
+  //   background: transparent;
+  //   @include iphone5{
+  //     top: 4px;
+  //     width: 45px;
+  //   }
+
+  // }
+
+  .inline-loader {
+    top: 6px;
+  }
+}
+
+.login-popup.login-popup{
+  .modal-dialog {
+    max-width: 400px;
+    @include iphone5 {
+        max-width: 320px;
+    }
+}
+}

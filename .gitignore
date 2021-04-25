@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+build
+.history
+.next
+.env
+yarn.lock
+package-lock.json
+coverage
+appConfig.js

@@ -1,0 +1,55 @@
+
+$checkboxSideLength: 22px;
+$checkboxBorderColor: #b3b3b3;
+$checkBoxTickColor: $primary;
+
+.custom-underline-radio {
+    position: relative;
+		// margin-right: 1px;
+		
+		display: inline-block;
+		// margin-bottom: 10px;
+    & + .custom-pill-checkbox {
+        margin-left: 10px;
+    }
+    input {
+        display: none;
+        &:checked + label {
+                color:var(--primary);
+                border-bottom: 3px solid var(--primary);
+            }
+        }
+    label {
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: $checkboxSideLength;
+        position: relative;
+        border:none;
+        border-bottom: 3px solid transparent;
+        padding: 8px 10px;
+        padding-right: 20px;
+        @include desktop {
+            padding:10px;
+            padding-right: 30px;
+        }
+        border-radius: 0px;
+        margin-bottom: 0;
+        color:#afafaf;
+        i{
+            font-size: 16px;
+    vertical-align: text-top;
+        }
+    }
+}
+@keyframes popanim {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

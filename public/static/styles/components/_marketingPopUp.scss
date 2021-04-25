@@ -1,0 +1,39 @@
+.marketingPopUp {
+    background-color: $modalBGColor;
+
+    .modal-dialog {
+        margin: 0 auto;
+        max-width: 350px;
+        @include iphone5 {
+            max-width: 300px;
+        }
+    }
+    .modal-body {
+        padding: 0;
+    }
+    .sub-title {
+        font-size: 1.1em;
+    }
+
+    .img-container {
+        min-height: 200px;
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 0.3rem 0.3rem 0 0;
+        }
+        margin-bottom: 1rem;
+    }
+    .bottom-container {
+        padding: 15px;
+    }
+    .title {
+        margin: 1.2rem 0;
+    }
+    .ok-btn {
+        width: 150px;
+    }
+    .name {
+        font-size: 1.5em;
+    }
+}

@@ -1,0 +1,5 @@
+package.json
+tsconfig.json
+settings.json
+*.scss
+README.md
