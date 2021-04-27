@@ -6,7 +6,7 @@ import appContext from '../Context/appContext';
 
 const fetcher = url => axios({ baseURL: process.env.NEXT_PUBLIC_SECURE_EC2_URL, url, method: 'GET' }).then(res => res.data);
 
-export const useIdProof = () => {
+export const getHospitals = () => {
   const {
     state: {
       user: { isLoggedIn }

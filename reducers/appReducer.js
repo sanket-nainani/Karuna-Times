@@ -1,5 +1,6 @@
 import * as modal from './modal';
 import * as user from './user';
+import * as hospital from './hospital';
 
 export const ACTION_TYPES = {
   TOGGLE_SIDEBAR: 'toggleSidebar',
@@ -12,6 +13,7 @@ export const ACTION_TYPES = {
 export const initialState = {
   sideBar: { isSideBarOpen: false, shouldRenderSideBar: false },
   user: user.createInitialStore(),
+  hospital: hospital.createInitialStore(),
   modal: modal.createInitialStore()
 };
 

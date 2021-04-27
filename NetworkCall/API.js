@@ -6,6 +6,22 @@ import StorageService from '../framework/src/services/storageService';
 const API_URL = process.env.NEXT_PUBLIC_SECURE_EC2_URL;
 
 const useAPI = () => {
+  async function getHospitals({ limit, offset }) {
+    try {
+      const response = await axios({
+        url: `${API_URL}/hospital/list?limit=${limit}&offset=${offset}`,
+        method: 'GET'
+      });
+      if (response) {
+        const hospitals = get(response, 'data', []);
+        return { hospitals };
+      }
+    } catch (error) {
+      return { validZipcode: false, locationId: false };
+    }
+    return { validZipcode: false, locationId: false };
+  }
+
   async function uploadPhotoId(file, type, onChangeProgress) {
     const url = `${API_URL}/customers/photoid/${type}`;
 
@@ -66,9 +82,7 @@ const useAPI = () => {
   }
 
   return {
-    uploadPhotoId,
-    checkPostCodeStatus,
-    requestEmailOTP
+    getHospitals
   };
 };
 
