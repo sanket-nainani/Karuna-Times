@@ -112,7 +112,7 @@ const Sidebar = () => {
         <div className="sidebarContent">
           <div className="sidebarBanner">
             <div className="sidebarBg" />
-            <img src={sample} alt={process.env.NEXT_PUBLIC_APP_NAME} height={80} className="logo-img" />
+            <img src={sample} alt={process.env.NEXT_PUBLIC_APP_NAME} className="logo-img" />
           </div>
           <div className="menu-list">{renderSidebarContent()}</div>
         </div>
