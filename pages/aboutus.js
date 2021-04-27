@@ -1,10 +1,11 @@
 import React from 'react';
 import get from 'lodash/get';
 import axios from '../framework/src/utils/ajax';
-import CMSComponent from '../framework/src/components/CMSComponent';
+// import CMSComponent from '../framework/src/components/CMSComponent';
 
 export default function TermsAndConditions({ html }) {
-  return <CMSComponent title="About Us" html={html} />;
+  // return <CMSComponent title="About Us" html={html} />;
+  return null;
 }
 
 export async function getStaticProps() {
