@@ -121,7 +121,7 @@ $grid-breakpoints: (
     --navbar-height:64px;
 		--secondary-navbar-height:0px;
     --pricing-table-border:#dee2e6;
-    --secondary-color:#004F59;
+    --secondary-color:#12c4db;
     }
 
 html,
@@ -1081,3 +1081,9 @@ background-position: center!important;
         min-height: 488px;
     }
 }
+
+.product {
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.23);
+    border-radius: 9px
+  
+  }

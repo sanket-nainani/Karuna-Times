@@ -65,20 +65,20 @@ const Header = ({
               </button>
             )}
             <div className="f-sec">{renderComponentForNewHeader()}</div>
-            <div className="s-sec">
+            {/* <div className="s-sec">
               <div className="t-search-bar relative cursor-pointer" >
                 <input type="text" className="form-control" placeholder="Search" />
                 <button type="button" className="btn ">
                   <i className="icon-search" />
                 </button>
               </div>
-            </div>
+            </div> */}
             <div className="t-sec">
             </div>
 
-            <div className="right-btn-container">
+            {/* <div className="right-btn-container">
             Icon
-            </div>
+            </div> */}
           </div>
         </nav>
         <div className={`secondary-navbar ${minimalNavbar ? 'minimal-navbar' : ''} ${secondaryNavbarClassName}`}>

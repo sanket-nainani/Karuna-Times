@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import Header from '../framework/src/components/Header';
@@ -11,6 +11,11 @@ const MainPage = ({ hospitals }) => {
   const {
     query: { slug }
   } = router;
+  const [infoOpen, setInfoOpen] = useState(false);
+
+  function openInfo() {
+    setInfoOpen(!infoOpen);
+  }
 
   const { data: hospitalList, isLoading, isValidating } = useHospitals({ limit: 10, offset: 0, hospitals });
   console.log(hospitalList);
@@ -20,7 +25,7 @@ const MainPage = ({ hospitals }) => {
         <title>{`Karuna Times | Covid Information Simplified`}</title>
       </Head>
       <Header hasText toPath="/" hasWhiteBg hasShadow />
-      <div id="KarunaTimes" className="partner">
+      <div id="KarunaTimes" className="partner cms-page">
         <div
           className="hero-img-container submit-op"
           style={{
@@ -33,7 +38,12 @@ const MainPage = ({ hospitals }) => {
                 <tr>
                   <th>Hosoital</th>
                   <th className="text-center">Available Beds</th>
-                  <th className="text-right">City</th>
+
+                  <th className="text-center">Without Oxygen</th>
+                  <th className="text-center">With Oxygen</th>
+                  <th className="text-center">ICU</th>
+                  <th className="text-center">Ventilators</th>
+                  <th className="text-center">City</th>
                 </tr>
                 {!isLoading &&
                   hospitalList &&
@@ -41,46 +51,61 @@ const MainPage = ({ hospitals }) => {
                   hospitalList.map(item => {
                     const maxQuantity = item.bundle_id ? item.max_quantity : item.product_max_quantity;
                     return (
-                      <tr>
-                        <td>{item.name}</td>
+                      <tr className={`product text-left product-grid relative lazy-load-product-height`}>
+                        <td>
+                          <div>
+                            {item.name} - {item.area_name}
+                            <button
+                              className="btn btn-sm py-0"
+                              disabled={item.quantity >= maxQuantity}
+                              onClick={() => openInfo()}
+                            >
+                              <i className="icon-plus text-primary" />
+                            </button>
+                          </div>
+                          {infoOpen && (
+                            <div>
+                              <div className="mx-2">{item.address}</div>
+                              {item.contact_person && <div className="mx-2">{item.contact_person}</div>}
+                              {item.phone && <div className="mx-2">{item.phone}</div>}
+                            </div>
+                          )}
+                        </td>
                         <td className="text-center whitespace-nowrap">
-                          <button
-                            className="btn btn-sm  py-0"
-                            disabled={item.quantity == 0}
-                            onClick={() => this.onChangeQuantity('-', item)}
-                          >
-                            <i className={`icon-${item.quantity > 1 ? 'minus' : 'delete'} text-primary`} />
-                          </button>
-                          <span className="mx-2">{item.quantity}</span>
-                          <button
-                            className="btn btn-sm py-0"
-                            disabled={item.quantity >= maxQuantity}
-                            onClick={() => this.onChangeQuantity('+', item)}
-                          >
-                            <i className="icon-plus text-primary" />
-                          </button>
+                          <span className="mx-2">
+                            {item.available_bed}/{item.total_bed}
+                          </span>
+                        </td>
+
+                        <td className="text-center whitespace-nowrap">
+                          <span className="mx-2">
+                            {item.available_bed_wo_oxygen}/{item.total_bed_wo_oxygen}
+                          </span>
+                        </td>
+                        <td className="text-center whitespace-nowrap">
+                          <span className="mx-2">
+                            {item.available_bed_oxygen}/{item.total_bed_oxygen}
+                          </span>
+                        </td>
+                        <td className="text-center whitespace-nowrap">
+                          <span className="mx-2">
+                            {item.available_bed_icu_wo_vent}/{item.total_bed_icu_wo_vent}
+                          </span>
+                        </td>
+                        <td className="text-center whitespace-nowrap">
+                          <span className="mx-2">
+                            {item.available_bed_icu_vent}/{item.total_bed_icu_vent}
+                          </span>
+                        </td>
+
+                        <td className="text-center whitespace-nowrap">
+                          <span className="mx-2">{item.city_name}</span>
                         </td>
                       </tr>
                     );
                   })}
               </table>
             </div>
-          </div>
-        </div>
-        <div className="inner container">
-          <h6 className="one-rem-mt bold">Partnership Opportunities</h6>
-          <p>
-            {`The Karuna times team is constantly on the hunt for unique helping opportunities, innovative products, and
-            the chance to collaborate with anyone making efforts to help people with the pandemic.
-            Please reach out to us with anything you feel is compelling or relevant and we will point you in the right
-            direction. Thank you for reaching out!`}
-          </p>
-          <div className="text-center two-rem-mb ">
-            <Link href="/contact">
-              <a to="/contact" className="btn btn-primary padding-btn res-btn-block has-box-shadow" role="button">
-                Contact Us
-              </a>
-            </Link>
           </div>
         </div>
       </div>

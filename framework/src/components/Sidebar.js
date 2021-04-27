@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import ActiveLink from './ActiveLink';
 import sidebarList from '../constants/menu';
-import sample from '../../../public/static/images/default.png';
+import sample from '../../../public/static/images/faicon.png';
 import appContext from '../../../Context/appContext';
 
 const Sidebar = () => {
@@ -112,7 +112,7 @@ const Sidebar = () => {
         <div className="sidebarContent">
           <div className="sidebarBanner">
             <div className="sidebarBg" />
-            <img src={sample} alt={process.env.NEXT_PUBLIC_APP_NAME} className="logo-img" />
+            <img src={sample} alt={process.env.NEXT_PUBLIC_APP_NAME} height={80} className="logo-img" />
           </div>
           <div className="menu-list">{renderSidebarContent()}</div>
         </div>

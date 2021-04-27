@@ -1,4 +1,9 @@
 .sidebar {
+    .logo-img {
+max-height: 80px;
+max-width: 80px;
+    }
+
     &.open + .landing-page {
         // pointer-events: none;
     }
@@ -46,7 +51,7 @@
             justify-content: center;
 
             .sidebarBg {
-                transform: skewY(5deg);
+                // transform: skewY(5deg);
                 background-color: $primary;
                 background-color: var(--primary);
                 position: absolute;
