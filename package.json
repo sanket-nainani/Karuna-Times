@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "rimraf .next",
-    "build": "node prepare.js && next build",
+    "build": "next build",
     "start": "next start -p 5000",
-    "dev": "node prepare.js && next",
+    "dev": "next",
     "test": "jest --coverage"
   },
   "author": "",
