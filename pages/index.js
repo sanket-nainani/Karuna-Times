@@ -28,9 +28,9 @@ const MainPage = ({ hospitals }) => {
       <div id="KarunaTimes" className="partner cms-page">
         <div
           className="hero-img-container submit-op"
-          style={{
-            backgroundImage: `url(/static/images/lightBulb.svg)`
-          }}
+          // style={{
+          //   backgroundImage: `url(/static/images/lightBulb.svg)`
+          // }}
         >
           <div className="hero-img-container-inner container">
             <div className="content-box">
