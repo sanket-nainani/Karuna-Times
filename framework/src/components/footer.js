@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import { withRouter } from 'next/router';
 import { openInNewTab } from '../helpers';
-import sample from '../../../public/static/images/default.png';
 
 const Footer = () => {
   const renderFooter = () => {
@@ -11,7 +10,7 @@ const Footer = () => {
         <div className="footer-top-section ">
           <div className="container footer-top-section-inner ">
             <div className="website-section">
-              <img className="logo" src={sample} />
+              <img className="logo" src="/static/images/default.png" />
               <h6 className="half-rem-mt">Covid 19 Information</h6>
               <IconHolder />
             </div>

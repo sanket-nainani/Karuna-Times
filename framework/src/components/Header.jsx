@@ -1,6 +1,5 @@
 import React, { Component, useContext } from 'react';
 import Router, { withRouter } from 'next/router';
-import sample from '../../../public/static/images/faicon.png';
 import appContext from '../../../Context/appContext';
 
 const Header = ({
@@ -43,7 +42,7 @@ const Header = ({
 
     return (
       <div className="main-logo ">
-        <img src={sample} onClick={goHome} alt={process.env.NEXT_PUBLIC_APP_NAME} />
+        <img src={'/static/images/faicon.png'} onClick={goHome} alt={process.env.NEXT_PUBLIC_APP_NAME} />
       </div>
     );
   }
