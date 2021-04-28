@@ -15,7 +15,7 @@ const SubmitOpportunities = () => {
         <div
           className="hero-img-container submit-op"
           style={{
-            backgroundImage: `url(/static/images/lightBulb.png)`
+            backgroundImage: `url(/static/images/lightBulb.svg)`
           }}
         >
           <div className="hero-img-container-inner container">
